@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>
-         Smart Project
+         MSI Portfolio | Smart Project
       </title>
       <link rel="stylesheet" type="text/css" href="style.css">
    </head>
@@ -16,6 +16,24 @@
       <div class="Name_Menu">
          <h1>MSI Portfolio Martijn van Bemmel</h1>
       </div>
+
+      <div class = "dateAndTime">
+         <div id="time"> </div>
+         <script>
+            function updateClock() {
+               let currentdate = new Date();
+               let datetime = currentdate.getDate() + "/"
+                  + (currentdate.getMonth() + 1) + "/"
+                  + currentdate.getFullYear() + " "
+                  + currentdate.getHours() + ":"
+                  + currentdate.getMinutes() + ":"
+                  + currentdate.getSeconds();
+               document.getElementById("time").innerHTML = datetime;
+               setTimeout(updateClock, 1000);
+            }
+            updateClock(); // initial call
+         </script>
+         </div>
 
       <br>
       <br>     
