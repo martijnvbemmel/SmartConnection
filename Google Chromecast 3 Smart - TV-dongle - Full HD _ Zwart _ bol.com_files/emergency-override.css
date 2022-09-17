@@ -1,0 +1,8 @@
+/* --- PATH-713 hide compare on search ---*/
+
+wsp-async-browse[intent="search"] wsp-comparable {display:none;}
+
+/* ------ */
+
+
+
