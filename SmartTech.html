@@ -1,83 +1,89 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>
-         MSI Portfolio | Smart Technology
-      </title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-   </head>
 
-   <header>
-      <div class="Logo">
-         <a href="#"><img src="images/HAN-logo.png" alt="Logo_Picture" width="150" height="80"></a>
-         <a href="#"><img src="images/msi.png" alt="Logo_Picture" width="150" height="80"></a>
-      </div>
+<head>
+   <title>
+      MSI Portfolio | Smart Technology
+   </title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-      <div class="Name_Menu">
-         <h1>MSI Portfolio Martijn van Bemmel</h1>
-      </div>
+<header>
+   <div class="Logo">
+      <a href="#"><img src="images/HAN-logo.png" alt="Logo_Picture" width="150" height="80"></a>
+      <a href="#"><img src="images/msi.png" alt="Logo_Picture" width="150" height="80"></a>
+   </div>
 
-      <div class = "dateAndTime">
-         <div id="time"> </div>
-         <script>
-            function updateClock() {
-               let currentdate = new Date();
-               let datetime = currentdate.getDate() + "/"
-                  + (currentdate.getMonth() + 1) + "/"
-                  + currentdate.getFullYear() + " "
-                  + currentdate.getHours() + ":"
-                  + currentdate.getMinutes() + ":"
-                  + currentdate.getSeconds();
-               document.getElementById("time").innerHTML = datetime;
-               setTimeout(updateClock, 1000);
-            }
-            updateClock(); // initial call
-         </script>
+   <div class="Name_Menu">
+      <h1>MSI Portfolio Martijn van Bemmel</h1>
+   </div>
+
+   <div class="dateAndTime">
+      <div id="time"> </div>
+      <script>
+         function updateClock() {
+            let currentdate = new Date();
+            let datetime = currentdate.getDate() + "/"
+               + (currentdate.getMonth() + 1) + "/"
+               + currentdate.getFullYear() + " "
+               + currentdate.getHours() + ":"
+               + currentdate.getMinutes() + ":"
+               + currentdate.getSeconds();
+            document.getElementById("time").innerHTML = datetime;
+            setTimeout(updateClock, 1000);
+         }
+         updateClock(); // initial call
+      </script>
+   </div>
+
+   <br>
+   <br>
+
+   <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="SmartMe.html">Smart Me</a>
+      <a href="SmartConn.html">Smart Connection</a>
+      <a class="active" href="SmartTech.html">Smart Technology</a>
+      <a href="SmartBus.html">Smart Business</a>
+      <a href="SmartProject.html">Smart Project</a>
+   </div>
+</header>
+
+<body>
+   <div class="row">
+      <div class="leftcolumn">
+         <div class="card">
+            <h2>Week 1 - Start IOT-schakeling Plant automatisering</h2>
+            <h5>1 september 2022</h5>
+            <div class="fakeimg" style="height:300px;">
+               <a href="images/BreadboardOpstelling.jpeg"><img src="images/BreadboardOpstelling.jpeg"
+                     alt="BreadBoardOpstelling" width=200px></a>
+            </div>
+            <p>Tijdens de eerste workshop van het vak Smart Technology is uitleg gegeven over wat de opdracht inhoud en
+               de planning van de workshops. Vervolgens is aan de opdracht begonnen en een start gemaakt met het
+               automatiseren van een plant.</p>
+            <p>Door uitleg te krijgen via een portaal over het programmeren van een microcontroller, in dit geval een
+               ESP32 controller, kon een start gemaakt worden met het uitlezen van sensoren en het aansturen van
+               actuatoren.</p>
          </div>
-
-      <br>
-      <br>     
-
-      <div class="topnav">      
-         <a href="index.html">Home</a>
-         <a href="SmartMe.html">Smart Me</a>
-         <a href="SmartConn.html">Smart Connection</a>
-         <a class="active" href="SmartTech.html">Smart Technology</a>
-         <a href="SmartBus.html">Smart Business</a>
-         <a href="SmartProject.html">Smart Project</a>
-      </div>
-   </header>
-
-   <body>
-      <div class="row">
-         <div class="leftcolumn">
-            <div class="card">
-               <h2>Week 1 - Start IOT-schakeling Plant automatisering</h2>
-               <h5>1 september 2022</h5>
-               <div class="fakeimg" style="height:300px;">  
-               <a href="images/BreadboardOpstelling.jpeg"><img src="images/BreadboardOpstelling.jpeg" alt="BreadBoardOpstelling" width=200px></a>
-               </div>
-               <p>Tijdens de eerste workshop van het vak Smart Technology is uitleg gegeven over wat de opdracht inhoud en de planning van de workshops. Vervolgens is aan de opdracht begonnen en een start gemaakt met het automatiseren van een plant.</p>
-               <p>Door uitleg te krijgen via een portaal over het programmeren van een microcontroller, in dit geval een ESP32 controller, kon een start gemaakt worden met het uitlezen van sensoren en het aansturen van actuatoren.</p>
-            </div>
-            <div class="card">
-               <h2>TITLE HEADING</h2>
-               <h5>Title description, Sep 2, 2017</h5>
-               <div class="fakeimg" style="height:200px;">Image</div>
-               <p>Some text..</p>
-            </div>
-            <div class="card">
-               <h2>TITLE HEADING</h2>
-               <h5>Title description, Sep 2, 2017</h5>
-               <div class="fakeimg" style="height:200px;">Image</div>
-               <p>Some text..</p>
-            </div>
+         <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+         </div>
+         <div class="card">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
          </div>
       </div>
-   
-      <div class="footer">
-         <h2>Footer</h2>
-      </div>
-   </body>
+   </div>
+
+   <div class="footer">
+      <h2>Footer</h2>
+   </div>
+</body>
 
 </html>
