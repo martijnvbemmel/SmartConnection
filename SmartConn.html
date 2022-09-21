@@ -10,8 +10,8 @@
 
 <header>
    <div class="Logo">
-      <a href="#"><img src="images/HAN-logo.png" alt="Logo_Picture" width="150" height="80"></a>
-      <a href="#"><img src="images/msi.png" alt="Logo_Picture" width="150" height="80"></a>
+      <a href="index.html"><img src="images/HAN-logo.png" alt="Logo_Picture" width="150" height="80"></a>
+      <a href="index.html"><img src="images/msi.png" alt="Logo_Picture" width="150" height="80"></a>
    </div>
 
    <div class="Name_Menu">
@@ -77,10 +77,45 @@
             <p>Some text..</p>
          </div>
          <div class="card">
-            <h2>TITLE HEADING</h2>
-            <h5>Title description, Sep 2, 2017</h5>
-            <div class="fakeimg" style="height:200px;">Image</div>
-            <p>Some text..</p>
+            <h2>Week 4 - Databases & Big Data & Machine Learning</h2>
+            <h5>21 september 2022</h5>
+            <p>Meld je nu aan bij mijn blog en mis niks van mijn leerproces!</p>
+            <form id="fs-frm" name="registration-form" accept-charset="utf-8" action="https://formspree.io/f/xknejdgp" method="post">
+               <fieldset id="fs-frm-inputs">
+                 <label for="full-name">Volledige Naam:</label>
+                 <input type="text" name="name" id="full-name" placeholder="Voor- en Achternaam" required="">
+                 <label for="email-address">Email:</label>
+                 <input type="text" name="_replyto" id="email-addres" placeholder="email@domein.tld" required="">
+                 <fieldset class="Woonplaats">
+                   <legend>Woonplaats</legend>
+                   <label for="street-address">Straat:</label>
+                   <input type="text" name="street" id="street-address" placeholder="Straat + Huisnummer" required="">
+                   <label for="city">Stad:</label>
+                   <input type="text" name="city" placeholder="Stad" required="">
+                   <label for="provincie">Provincie:</label>
+                   <select name="Provincie" required="">
+                      <option value="Drenthe">Drenthe</option>
+                      <option value="Flevoland">Flevoland</option>
+                      <option value="Friesland">Friesland</option>
+                      <option value="Gelderland">Gelderland</option>
+                      <option value="Groningen">Groningen</option>
+                      <option value="Limburg">Limburg</option>
+                      <option value="Noord-Brabant">Noord-Brabant</option>
+                      <option value="Noord-Holland">Noord-Holland</option>
+                      <option value="Overijssel">Overijssel</option>
+                      <option value="Utrecht">Utrecht</option>
+                      <option value="Zeeland">Zeeland</option>
+                      <option value="Zuid-Holland">Zuid-Holland</option>
+                   </select>
+                   <label for="Postcode">Postcode:</label>
+                   <input type="text" name="Postcode" placeholder="1234AB" required="">
+                 </fieldset>
+                 <label for="note">Opmerking:</label>
+                 <input type="text" name="note" id="note" placeholder="Extra Informatie...">
+                 <input type="hidden" name="_subject" id="email-subject" value="Registration Form Submission">
+               </fieldset>
+               <input type="submit" value="Registeer">
+             </form>
          </div>
       </div>
    </div>

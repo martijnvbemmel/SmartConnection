@@ -109,3 +109,23 @@ body {
     padding: 0;
   }
 }
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 0px;
+  margin: 10px 0;
+  height: 15px;
+}
+
+input[type=submit]{
+  width: 10%;
+  padding: 2px 0px;
+  margin: 10px 0;
+}
+
+select {
+  width: 100%;
+  padding: 2px 0px;
+  margin: 10px 0;
+  Height: 30px;
+}
