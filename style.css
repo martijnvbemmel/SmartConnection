@@ -92,6 +92,7 @@ body {
   clear: both;
 }
 
+
 /* Footer */
 .footer {
   padding: 20px;
@@ -110,14 +111,14 @@ body {
   }
 }
 
-input[type=text]{
+input[type=text] {
   width: 100%;
   padding: 12px 0px;
   margin: 10px 0;
   height: 15px;
 }
 
-input[type=submit]{
+input[type=submit] {
   width: 10%;
   padding: 2px 0px;
   margin: 10px 0;

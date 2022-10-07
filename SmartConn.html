@@ -6,6 +6,7 @@
       MSI Portfolio | Smart Connection
    </title>
    <link rel="stylesheet" type="text/css" href="style.css">
+   <meta http-equiv="refresh" content="60" />
 </head>
 
 <header>
@@ -220,6 +221,80 @@
                }
             </script>
 
+         </div>
+         <div class="card">
+            <h2>Week 6 - APIs</h2>
+            <h5>4 oktober 2022</h5>
+            <div class="fakeimg" style="height:300px;">
+               <a href="images/Weerbericht_Code.png"><img src="images/Weerbericht_Code.png" alt="Weerbericht_Code"
+                     width=400px></a>
+               <a href="images/Covid19_Code.png"><img src="images/Covid19_Code.png" alt="Covid19_Code" width=960px></a>
+            </div>
+            <p>Tijdens de vierde en laatste les van Smart Connection hebben we de opdracht gekregen om het weerbericht
+               te tonen op je website die data haalt vanuit een API. (Application Programmable Interface) Zie hier het
+               resultaat: </p>
+            <div id="weather">
+               <div id="location"></div>
+               <div id="temp"></div>
+               <div id="Luchtvochtigheid"></div>
+               <div id="description"></div>
+               <div id="Luchtdruk"></div>
+               <div id="Windsnelheid"></div>
+
+            </div>
+            <script lang="text/javascript">
+               function weatherBalloon(cityID) {
+                  var key = 'a94024f4f4bd2286a1077562b6f4e261';
+                  fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
+                     .then(function (resp) { return resp.json() }) // Convert data to json
+                     .then(function (data) {
+                        drawWeather(data); // Call drawWeather
+                     })
+                     .catch(function () {
+                        // catch any errors
+                     });
+               }
+
+               function drawWeather(d) {
+                  var celcius = Math.round(parseFloat(d.main.temp) - 273.15);
+                  var fahrenheit = Math.round(((parseFloat(d.main.temp) - 273.15) * 1.8) + 32);
+
+                  document.getElementById('location').innerHTML = 'Het weer in: ' + d.name;
+                  document.getElementById('description').innerHTML = 'Bewolking: ' + d.weather[0].description;
+                  document.getElementById('temp').innerHTML = 'Temperatuur: ' + celcius + ' &deg;C';
+                  document.getElementById('Luchtvochtigheid').innerHTML = 'Luchtvochtigheid: ' + d.main.humidity + ' %';
+                  document.getElementById('Luchtdruk').innerHTML = 'Luchtdruk: ' + d.main.pressure + ' hPa';
+                  document.getElementById('Windsnelheid').innerHTML = 'Windsnelheid: ' + d.wind.speed + ' m/s';
+
+               }
+
+               window.onload = function () {
+                  weatherBalloon(6544265);
+               }
+            </script>
+            <br>
+            <p>Vervolgens is een andere API geprogrammeerd op de website, namelijk die van de Covid-19 cijfers van
+               Nederland. Hiervan het resultaat:</p>
+            <div id="land"></div>
+            <div id="datum"></div>
+            <div id="aantal_Besmettingen"></div>
+            <div id="aantal_Doden"></div>
+
+            <script lang="text/javascript">
+               fetch('https://api.covid19api.com/summary')
+                  .then(function (resp) { return resp.json() }) // Convert data to json
+                  .then(function (data) {
+                     console.log(data);
+                     console.log(data.Countries[125].Country);
+                     console.log(data.Countries[125].TotalDeaths);
+                     document.getElementById("land").innerHTML = 'Corona Data van: ' + (data.Countries[125].Country);
+                     document.getElementById("datum").innerHTML = 'Datum: ' + (data.Countries[125].Date);
+                     document.getElementById("aantal_Besmettingen").innerHTML = 'Aantal besmettingen: ' + (data.Countries[125].TotalConfirmed);
+                     document.getElementById("aantal_Doden").innerHTML = 'Aantal doden: ' + (data.Countries[125].TotalDeaths);
+                  })
+                  .catch(function () {  // catch any errors
+                  }); 
+            </script>
          </div>
       </div>
    </div>
